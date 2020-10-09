@@ -1,17 +1,17 @@
 {% set name = "yellowbrick" %}
-{% set version = "1.1" %}
+{% set version = "1.2" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 3edddb4a16ddd0586169fccd0645b2fa78e266c40968f872753909250ac6826c
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 380b9775c9ad1880be55fab697a5d694823f9bc972bd7c2108553a11c7c8f252
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
@@ -47,13 +47,13 @@ test:
     - yellowbrick.utils
 
 about:
-  home: "http://scikit-yb.org/"
+  home: http://scikit-yb.org/
   license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE.txt
-  summary: "A suite of visual analysis and diagnostic tools for machine learning."
-  doc_url: "https://www.scikit-yb.org/en/latest/"
-  dev_url: "https://github.com/DistrictDataLabs/yellowbrick"
+  summary: A suite of visual analysis and diagnostic tools for machine learning.
+  doc_url: https://www.scikit-yb.org/en/latest/
+  dev_url: https://github.com/DistrictDataLabs/yellowbrick
 
 extra:
   recipe-maintainers:
