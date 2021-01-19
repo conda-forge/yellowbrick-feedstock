@@ -24,8 +24,9 @@ requirements:
     - cycler >=0.10.0
     - matplotlib-base >=2.0.2,!=3.0.0
     - numpy >=1.13.0
-    - scikit-learn >=0.20
-    - scipy >=1.0.0
+    - scikit-learn >=0.20,<0.24
+    - scipy >=1.0.0,<1.6
+
 
 test:
   imports:
