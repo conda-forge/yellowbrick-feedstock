@@ -16,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.4
     - pip
     - pytest-runner
   run:
-    - python >=3.5
+    - python >=3.4
     - cycler >=0.10.0
     - matplotlib-base >=2.0.2,!=3.0.0
     - numpy >=1.13.0
