@@ -1,5 +1,5 @@
 {% set name = "yellowbrick" %}
-{% set version = "1.4" %}
+{% set version = "1.5" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f690b8f8b7e6962dfc059ec1d59606913561addcc5948377d91f1681ef46874b
+  sha256: 99a6336dd2e7ce586a8cde67966b79c51b479d3759f3c083d7e19ffe949f6076
 
 build:
   number: 0
