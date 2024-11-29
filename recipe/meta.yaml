@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 99a6336dd2e7ce586a8cde67966b79c51b479d3759f3c083d7e19ffe949f6076
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
   host:
-    - python >=3.4
+    - python {{ python_min }}
     - pip
     - pytest-runner
   run:
-    - python >=3.4
+    - python >={{ python_min }}
     - cycler >=0.10.0
     - matplotlib-base >=2.0.2,!=3.0.0
     - numpy >=1.16.0
@@ -48,6 +48,7 @@ test:
     - yellowbrick.utils
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
